@@ -7,7 +7,7 @@ import "./App.css";
 
 // You need to add your own API key here from Clarifai.
 const app = new Clarifai.App({
-  apiKey: "b3aef77b71f6459194e7c52bb7abd863",
+  apiKey: "Your api key goes here",
 });
 
 class App extends Component {
