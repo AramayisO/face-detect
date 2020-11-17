@@ -4,7 +4,7 @@ import "./FaceDetect.css";
 const FaceDetect = ({ imageUrl, boxes, boxColor }) => {
   return (
     <div className="center ma">
-      <div className="absolute mt2">
+      <div className="absolute mt5">
         <img id="inputimage" alt="" src={imageUrl} width="500px" heigh="auto" />
         {boxes.map((box, index) => (
           <div

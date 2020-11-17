@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Clarifai from "clarifai";
-import { ChromePicker } from "react-color";
+import { HuePicker } from "react-color";
 import ImageSearchForm from "./components/ImageSearchForm/ImageSearchForm";
 import FaceDetect from "./components/FaceDetect/FaceDetect";
 import "./App.css";
@@ -17,7 +17,7 @@ class App extends Component {
       input: "",
       imageUrl: "",
       boxes: [],
-      color: "#fff"
+      color: "#f00"
     };
   }
 
@@ -65,9 +65,13 @@ class App extends Component {
         <ImageSearchForm
           onInputChange={this.onInputChange}
           onSubmit={this.onSubmit} />
-        <ChromePicker
-          color={this.state.color}
-          onChange={this.handleColorChange} />
+
+        <div className="center">
+          <HuePicker
+            color={this.state.color}
+            onChange={this.handleColorChange} />
+        </div>
+
         <FaceDetect
           boxes={this.state.boxes}
           boxColor={this.state.color}
