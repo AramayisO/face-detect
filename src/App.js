@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Clarifai from "clarifai";
 import { HuePicker } from "react-color";
-import ImageSearchForm from "./components/ImageSearchForm/ImageSearchForm";
-import FaceDetect from "./components/FaceDetect/FaceDetect";
+import ImageSearchForm from "./ImageSearchForm/ImageSearchForm";
+import FaceDetect from "./FaceDetect/FaceDetect";
 import "./App.css";
 
 // You need to add your own API key here from Clarifai.
