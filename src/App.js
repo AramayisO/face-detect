@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Clarifai from "clarifai";
+import { ChromePicker } from "react-color";
 import ImageSearchForm from "./components/ImageSearchForm/ImageSearchForm";
 import FaceDetect from "./components/FaceDetect/FaceDetect";
 import "./App.css";
@@ -16,7 +17,14 @@ class App extends Component {
       input: "",
       imageUrl: "",
       boxes: [],
+      color: "#fff"
     };
+  }
+
+  handleColorChange = (color) => {
+    this.setState({
+      color: color.hex
+    });
   }
 
   calculateFaceLocation = (data) => {
@@ -56,9 +64,14 @@ class App extends Component {
       <div className="App">
         <ImageSearchForm
           onInputChange={this.onInputChange}
-          onSubmit={this.onSubmit}
-        />
-        <FaceDetect boxes={this.state.boxes} imageUrl={this.state.imageUrl} />
+          onSubmit={this.onSubmit} />
+        <ChromePicker
+          color={this.state.color}
+          onChange={this.handleColorChange} />
+        <FaceDetect
+          boxes={this.state.boxes}
+          boxColor={this.state.color}
+          imageUrl={this.state.imageUrl} />
       </div>
     );
   }

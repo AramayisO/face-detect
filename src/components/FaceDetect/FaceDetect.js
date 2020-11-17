@@ -1,7 +1,7 @@
 import React from "react";
 import "./FaceDetect.css";
 
-const FaceDetect = ({ imageUrl, boxes }) => {
+const FaceDetect = ({ imageUrl, boxes, boxColor }) => {
   return (
     <div className="center ma">
       <div className="absolute mt2">
@@ -15,6 +15,7 @@ const FaceDetect = ({ imageUrl, boxes }) => {
               right: box.rightCol,
               bottom: box.bottomRow,
               left: box.leftCol,
+              boxShadow: `0 0 0 3px ${boxColor} inset`,
             }}
           ></div>
         ))}
