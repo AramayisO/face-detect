@@ -1,4 +1,6 @@
 # Face Detect
+![](demo.gif)
+
 Face Detect is a ReactJS application that allows users to input an image URL and uses the Clarifai API to detect human faces and draw bounding boxes around them.
 
 ## Live app
